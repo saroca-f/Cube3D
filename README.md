@@ -6,40 +6,58 @@ This program is an introduction to 3D graphical programming, using the rendering
 
 ## **Objective**
 
-The goal of this project is to develop a solution that avoids race conditions, deadlocks, and starvation using threads and synchronization mechanisms.
+This project teaches key concepts in:
+
+- Ray-casting algorithms
+- Basic 3D rendering techniques
+- Game engine foundations
+- Efficient memory and resource management
 
 ## **Features**
 
-- **Use of threads:** Each philosopher is represented by a separate thread, allowing concurrent execution of eating, sleeping and thinking actions.
-- **Synchronization:** Synchronization mechanisms, such as mutexes, are implemented to control access to shared resources (like forks).
-- **Deadlock prevention:** Strategies are designed to avoid mutual blocking situations where philosophers cannot progress.
-- **Starvation prevention:** We ensure that no philosopher is left indefinitely waiting to eat.
+- **Custom Map Loading:** Parse and render 2D maps in .cub format.
+- **Textured Rendering:** Apply textures to walls for enhanced visuals.
+- **Collision Detection:** Prevent the player from walking through walls.
+- **Smooth Movement & Rotation:** Navigate the world in first-person, with fluid controls.
 
 ## **Compilation and Execution**
 ### Requirements
 - Any C-compatible compiler.
-- Make.
+- MLX42: A simple graphical library used for rendering.
 
 ### **Instructions**
 Clone this repository:
 
 ```sh
-git clone git@github.com:saroca-f/philosophers.git
-cd philosophers
+git clone git@github.com:saroca-f/Cube3D.git
+cd Cube3D
 ```
-Compila el proyecto usando Make:
+Compile the proyect with Make:
 
 ```sh
 Make
 ```
+or use Make with bonus
+```sh
+Make bonus
+```
+
+If you compile using the bonus rule, you enable the minimap, mouse-controlled rotation, door interaction, and an animation feature.
+
 Run the program:
 
 ```Copy code
-./philo <number_of_philosophers> <time_to_die> <time_to_eat> <time_to_sleep> [number_of_times_each_philosopher_must_eat]
+./cub3D [map path]
 ```
+or if you use the bonus rule:
+
+```Copy code
+./cub3D_bonus [map path]
+```
+
 Example
 
 ```
-./philo 5 800 200 200
+./cub3D maps/map2.cub
 ```
-This will start the simulation with 5 philosophers, where each philosopher will die if he does not eat in 800 ms, takes 200 ms to eat and 200 ms to sleep.
+This will start the simulation with a map at this path.
