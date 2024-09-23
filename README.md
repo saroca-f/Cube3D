@@ -23,7 +23,7 @@ This project teaches key concepts in:
 ## **Compilation and Execution**
 ### Requirements
 - Any C-compatible compiler.
-- MLX42: A simple graphical library used for rendering.
+- MLX42: A simple graphical library used for rendering. (included)
 
 ### **Instructions**
 Clone this repository:
