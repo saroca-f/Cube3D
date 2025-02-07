@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 18:01:21 by schamizo          #+#    #+#             */
-/*   Updated: 2024/09/04 15:49:24 by schamizo         ###   ########.fr       */
+/*   Updated: 2025/02/07 14:48:58 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	check_left_right_space(char **map, int i, int j, int flag)
 {
 	if (i != 0)
 	{
-		if (map[i - 1][j] == ' ')
+		if (map[i - 1] && map[i - 1][j] == ' ')
 		{
 			print_invalid_space_error(i - 1, j);
 			flag = 1;
@@ -73,7 +73,7 @@ int	check_left_right_space(char **map, int i, int j, int flag)
 	}
 	if (i != ft_split_size(map))
 	{
-		if (map[i + 1][j] == ' ')
+		if (map[i + 1] && map[i + 1][j] == ' ')
 		{
 			print_invalid_space_error(i + 1, j);
 			flag = 1;
